@@ -22,6 +22,7 @@
 function parse(text) {
     var src = stripComments(text);
     src = stripTrailingCommas(src);
+    src = quoteUnquotedKeys(src);
     return JSON.parse(src);
 }
 
@@ -76,4 +77,88 @@ function stripTrailingCommas(text) {
     // Replace ", ]" or ", }" (with optional whitespace/newlines between)
     // with "] / "}".
     return text.replace(/,(\s*[\]\}])/g, "$1");
+}
+
+// Wrap bareword object keys in double quotes so the JSON parser
+// accepts them. Walks the string character-by-character tracking
+// string + bracket state to avoid mangling keys that are already
+// quoted or values that happen to contain `:`.
+function quoteUnquotedKeys(text) {
+    var out = "";
+    var i = 0;
+    var n = text.length;
+    var inString = false;
+    var stringQuote = "";
+    var pendingKey = true; // start of an identifier-position in object
+    while (i < n) {
+        var c = text[i];
+
+        if (inString) {
+            out += c;
+            if (c === "\\" && i + 1 < n) {
+                out += text[i + 1];
+                i += 2;
+                continue;
+            }
+            if (c === stringQuote) {
+                inString = false;
+                // After a string at the top level of an object,
+                // a following `:` is a key; next non-space token is
+                // either `,`, `}`, or end.
+                pendingKey = false;
+            }
+            i++;
+            continue;
+        }
+
+        if (c === "\"" || c === "'") {
+            inString = true;
+            stringQuote = c;
+            // a string at pendingKey position is a key (already quoted)
+            out += c;
+            i++;
+            pendingKey = false;
+            continue;
+        }
+
+        if (c === "{") {
+            out += c;
+            i++;
+            pendingKey = true;
+            continue;
+        }
+
+        if (c === "}" || c === ",") {
+            out += c;
+            i++;
+            // After `,` inside an object, the next non-space token is
+            // a key. After `}`, we're no longer in an object key.
+            pendingKey = (c === ",");
+            continue;
+        }
+
+        // Skip whitespace but don't change pendingKey.
+        if (c === " " || c === "\t" || c === "\n" || c === "\r") {
+            out += c;
+            i++;
+            continue;
+        }
+
+        // We're at the start of a bareword. If pendingKey is true,
+        // we're inside an object and this token must be a key — wrap
+        // it in quotes. Otherwise (value position), pass through.
+        if (pendingKey && /[A-Za-z_$]/.test(c)) {
+            var j = i;
+            while (j < n && /[A-Za-z0-9_$]/.test(text[j])) j++;
+            var word = text.substring(i, j);
+            out += "\"" + word + "\"";
+            i = j;
+            pendingKey = false;
+            continue;
+        }
+
+        out += c;
+        i++;
+    }
+    return out;
 }

@@ -28,7 +28,7 @@ Item {
         if (background && typeof background.opacity === "number") {
             return background.opacity;
         }
-        return Theme.opacity.opacityBar;
+        return Theme.opacityBar;
     }
 
     readonly property bool blur: !!(background && background.blur)
@@ -37,6 +37,6 @@ Item {
         anchors.fill: parent
         color: root.resolvedColor
         opacity: root.resolvedOpacity
-        radius: Theme.radius.radiusMd
+        radius: Theme.radiusMd
     }
 }

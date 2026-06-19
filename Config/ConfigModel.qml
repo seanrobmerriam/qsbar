@@ -4,9 +4,12 @@
 // Config object. Pure data — no I/O, no UI bindings. Called from
 // Config.qml's `_reload()` to produce the validated `Config.data`.
 
+pragma Singleton
 import QtQuick
+import Quickshell
+import qs.Services
 
-QtObject {
+Singleton {
     // --- Top-level validators ---------------------------------------------
 
     function validate(parsed) {

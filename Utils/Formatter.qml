@@ -7,8 +7,10 @@
 // `formatBytes`, `formatDuration`.
 
 pragma Singleton
+import QtQuick
+import Quickshell
 
-QtObject {
+Singleton {
     // 0..100 → "NN%"
     function formatPercent(v) {
         if (typeof v !== "number" || isNaN(v)) return "—";

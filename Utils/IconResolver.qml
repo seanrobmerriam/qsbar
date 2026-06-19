@@ -10,8 +10,10 @@
 // "application-x-executable" icon).
 
 pragma Singleton
+import QtQuick
+import Quickshell
 
-QtObject {
+Singleton {
     // Built-in name → freedesktop icon name mapping.
     readonly property var _table: ({
         // Audio

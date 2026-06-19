@@ -7,7 +7,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Services.Notifications
 
-QtObject {
+Singleton {
     id: root
 
     readonly property var list: {

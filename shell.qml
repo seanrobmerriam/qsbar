@@ -23,6 +23,7 @@ ShellRoot {
         id: barsVariants
         model: shell._barsModel
         delegate: BarMod.Bar {
+            required property var modelData
             barIndex: modelData.barIndex
             screen: modelData.screen
         }

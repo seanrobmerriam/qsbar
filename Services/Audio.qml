@@ -15,7 +15,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Services.Pipewire
 
-QtObject {
+Singleton {
     id: root
 
     readonly property var defaultSink: {

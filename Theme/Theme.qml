@@ -13,8 +13,9 @@
 
 pragma Singleton
 import QtQuick
+import Quickshell
 
-QtObject {
+Singleton {
     id: root
 
     // --- colors (19 tokens) ----------------------------------------------

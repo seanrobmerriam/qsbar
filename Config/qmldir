@@ -1,4 +1,4 @@
 module qs.Config
 singleton Config 1.0 Config.qml
-ConfigModel 1.0 ConfigModel.qml
+singleton ConfigModel 1.0 ConfigModel.qml
 Json5 1.0 json5.js

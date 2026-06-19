@@ -17,10 +17,12 @@ pragma Singleton
 import QtQuick
 import Quickshell
 import Quickshell.Io
+import qs.Config
+import qs.Services
 import qs.Utils
 import "json5.js" as Json5
 
-QtObject {
+Singleton {
     id: root
 
     // --- File location -----------------------------------------------------
@@ -37,14 +39,19 @@ QtObject {
         if (qsShare && qsShare.length > 0) {
             return qsShare + "/examples/starter-config.json5";
         }
-        return Quickshell.scriptPath + "/examples/starter-config.json5";
+        // Quickshell.shellDir is the directory that contains shell.qml
+        // (the entrypoint of the running config). The starter config
+        // ships next to that file under examples/.
+        return Quickshell.shellDir + "/examples/starter-config.json5";
     }
 
     // --- Parsed config -----------------------------------------------------
 
     property var data: ({})
 
-    readonly property bool ready: false
+    // `ready` flips true after the first successful load (seed,
+    // empty, or parse). Not readonly because it transitions once.
+    property bool ready: false
 
     // --- Signals -----------------------------------------------------------
 

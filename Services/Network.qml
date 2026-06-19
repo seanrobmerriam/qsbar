@@ -6,7 +6,7 @@ pragma Singleton
 import QtQuick
 import Quickshell
 
-QtObject {
+Singleton {
     id: root
 
     readonly property var wifi: {

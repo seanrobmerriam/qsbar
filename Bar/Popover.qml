@@ -71,8 +71,8 @@ PopupWindow {
 
     Behavior on opacity {
         NumberAnimation {
-            duration: Theme.animations.animationsEnabled ? Theme.animations.animationsDuration : 0
-            easing.type: Theme.animations.animationsEasing
+            duration: Theme.animations.enabled ? Theme.animations.duration : 0
+            easing.type: Theme.animations.easing
         }
     }
 
