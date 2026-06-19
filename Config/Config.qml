@@ -20,7 +20,7 @@ import Quickshell.Io
 import qs.Utils
 import "json5.js" as Json5
 
-Singleton {
+QtObject {
     id: root
 
     // --- File location -----------------------------------------------------

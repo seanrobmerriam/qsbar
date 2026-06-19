@@ -14,7 +14,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Io
 
-Singleton {
+QtObject {
     id: root
 
     // --- Reactive outputs (cache) ----------------------------------------

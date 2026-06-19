@@ -12,7 +12,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Services.SystemTray
 
-Singleton {
+QtObject {
     id: root
 
     readonly property var _tray: SystemTray

@@ -11,7 +11,7 @@
 
 pragma Singleton
 
-Singleton {
+QtObject {
     // Built-in name → freedesktop icon name mapping.
     readonly property var _table: ({
         // Audio

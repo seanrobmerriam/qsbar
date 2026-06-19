@@ -13,7 +13,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Hyprland
 
-Singleton {
+QtObject {
     id: root
 
     readonly property var hyprland: Hyprland

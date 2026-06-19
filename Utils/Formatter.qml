@@ -8,7 +8,7 @@
 
 pragma Singleton
 
-Singleton {
+QtObject {
     // 0..100 → "NN%"
     function formatPercent(v) {
         if (typeof v !== "number" || isNaN(v)) return "—";

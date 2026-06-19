@@ -8,7 +8,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Services.PowerProfile
 
-Singleton {
+QtObject {
     id: root
 
     readonly property var profiles: {

@@ -10,7 +10,7 @@
 pragma Singleton
 import QtQuick
 
-Singleton {
+QtObject {
     id: root
 
     // Levels (ascending severity).

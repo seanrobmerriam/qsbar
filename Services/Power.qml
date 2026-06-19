@@ -7,7 +7,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Services.UPower
 
-Singleton {
+QtObject {
     id: root
 
     readonly property var batteries: {

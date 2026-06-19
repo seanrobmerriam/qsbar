@@ -7,7 +7,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Services.Mpris
 
-Singleton {
+QtObject {
     id: root
 
     readonly property var players: {
