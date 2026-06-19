@@ -10,7 +10,7 @@ bar updates within ~100 ms.
 ## Install
 
 ```bash
-git clone https://github.com/sean/qsbar ~/.config/quickshell/qsbar
+git clone https://github.com/seanrobmerriam/qsbar ~/.config/quickshell/qsbar
 # Add to your Hyprland config:
 #   exec-once = quickshell --path ~/.config/quickshell/qsbar
 ```

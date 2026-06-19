@@ -21,7 +21,7 @@ a `Theme` singleton, and live hot-reload — drop-in for `waybar` /
 
 ```sh
 # 1. Clone into the Quickshell config dir (so `quickshell -c qsbar` works)
-git clone https://github.com/sean/qsbar ~/.config/quickshell/qsbar
+git clone https://github.com/seanrobmerriam/qsbar ~/.config/quickshell/qsbar
 
 # 2. Seed the starter config (also auto-seeded on first launch)
 cp ~/.config/quickshell/qsbar/examples/starter-config.json5 \
