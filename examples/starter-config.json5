@@ -1,0 +1,56 @@
+// examples/starter-config.json5
+//
+// Default drop-in configuration. Copied to the user's config dir on
+// first run (per T035) so the bar appears immediately on a fresh
+// install. Matches quickstart.md §3.
+
+{
+  version: 1,
+  theme: "default",
+  themeOverrides: {
+    colors: {
+      // Empty — the user is encouraged to override these in their
+      // own config.
+    }
+  },
+  bars: [
+    {
+      name: "default",
+      position: "top",
+      layer: "top",
+      height: 30,
+      margin: 0,
+      exclusiveZone: true,
+      perMonitor: true,
+      background: {
+        color: "#ee222222",
+        opacity: 0.9,
+        blur: false
+      },
+      modules: {
+        left: [
+          { type: "Workspaces" }
+        ],
+        center: [
+          { type: "WindowTitle" },
+          { type: "Mpris" }
+        ],
+        right: [
+          { type: "Cpu" },
+          { type: "Ram" },
+          { type: "Battery" },
+          { type: "Network" },
+          { type: "Bluetooth" },
+          { type: "PowerProfile" },
+          { type: "Audio" },
+          { type: "Clock", widget: { format: "HH:mm" } },
+          { type: "Notifications" },
+          { type: "Tray" }
+        ]
+      }
+    }
+  ],
+  debug: {
+    verbose: false
+  }
+}

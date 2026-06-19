@@ -1,0 +1,8 @@
+module qs.Bar
+Bar 1.0 Bar.qml
+BarBackground 1.0 BarBackground.qml
+BarLayout 1.0 BarLayout.qml
+ClickDispatcher 1.0 ClickDispatcher.qml
+ModuleHost 1.0 ModuleHost.qml
+ModuleSlot 1.0 ModuleSlot.qml
+Popover 1.0 Popover.qml

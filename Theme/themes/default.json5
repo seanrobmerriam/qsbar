@@ -1,0 +1,31 @@
+// Theme/themes/default.json5
+// The default theme — mirrors Theme.qml's hardcoded defaults so the
+// bar looks identical whether the user supplies this theme or none.
+
+{
+  name: "default",
+  colors: {
+    bg: "#ee222222",
+    bgAlt: "#22ffffff",
+    fg: "#ffeeeeee",
+    fgMuted: "#aaeeeeee",
+    accent: "#ff7aa2f7",
+    urgent: "#fff7768e",
+    success: "#ff9ece6a",
+    warning: "#ffe0af68",
+    error: "#ffdb4b4b"
+  },
+  fonts: {
+    family: "Inter",
+    familyMono: "JetBrains Mono",
+    size: 12,
+    sizeSmall: 10,
+    sizeLarge: 14,
+    weight: 500,
+    weightBold: 700
+  },
+  space: { xs: 2, sm: 4, md: 8, lg: 12, xl: 20 },
+  radius: { sm: 4, md: 8, lg: 12, pill: 9999 },
+  animations: { enabled: true, duration: 150, durationFast: 75, durationSlow: 300 },
+  opacity: { disabled: 0.4, hover: 0.85, pressed: 0.7, bar: 0.9 }
+}

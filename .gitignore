@@ -1,0 +1,46 @@
+# Build artifacts
+*.qmlc
+*.jsc
+build/
+dist/
+
+# spec-kit
+specs/
+.specify/
+
+# Quickshell runtime
+.qs/
+.qsbt/
+*.qsb
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.log.*
+logs/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python (tests may use)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (in case)
+node_modules/
+
+# OS / temp
+*.tmp
+*.bak

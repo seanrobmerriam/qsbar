@@ -1,0 +1,31 @@
+// Theme/themes/nord.json5
+// Nord palette — muted, cool blues and grays. Reference:
+//   https://www.nordtheme.com/
+
+{
+  name: "nord",
+  colors: {
+    bg: "#ee2e3440",
+    bgAlt: "#22303030",
+    fg: "#ffeceff4",
+    fgMuted: "#aaeceff4",
+    accent: "#ff88c0d0",
+    urgent: "#ffbf616a",
+    success: "#ffa3be8c",
+    warning: "#ffebcb8b",
+    error: "#ffbf616a"
+  },
+  fonts: {
+    family: "Inter",
+    familyMono: "JetBrains Mono",
+    size: 12,
+    sizeSmall: 10,
+    sizeLarge: 14,
+    weight: 500,
+    weightBold: 700
+  },
+  space: { xs: 2, sm: 4, md: 8, lg: 12, xl: 20 },
+  radius: { sm: 4, md: 8, lg: 12, pill: 9999 },
+  animations: { enabled: true, duration: 150, durationFast: 75, durationSlow: 300 },
+  opacity: { disabled: 0.4, hover: 0.85, pressed: 0.7, bar: 0.9 }
+}

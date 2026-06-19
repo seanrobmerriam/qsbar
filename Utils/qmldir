@@ -1,0 +1,3 @@
+module qs.Utils
+singleton Formatter 1.0 Formatter.qml
+singleton IconResolver 1.0 IconResolver.qml

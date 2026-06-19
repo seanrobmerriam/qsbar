@@ -1,0 +1,12 @@
+module qs.Services
+singleton Logger 1.0 Logger.qml
+singleton Metrics 1.0 Metrics.qml
+singleton HyprlandMonitor 1.0 HyprlandMonitor.qml
+singleton Tray 1.0 Tray.qml
+singleton Audio 1.0 Audio.qml
+singleton Mpris 1.0 Mpris.qml
+singleton Power 1.0 Power.qml
+singleton Network 1.0 Network.qml
+singleton Bluetooth 1.0 Bluetooth.qml
+singleton PowerProfile 1.0 PowerProfile.qml
+singleton Notifications 1.0 Notifications.qml

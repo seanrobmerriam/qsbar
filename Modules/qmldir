@@ -1,0 +1,19 @@
+module qs.Modules
+Spacer 1.0 Spacer.qml
+Group 1.0 Group.qml
+Workspaces 1.0 Workspaces.qml
+WorkspaceButton 1.0 WorkspaceButton.qml
+Clock 1.0 Clock.qml
+Tray 1.0 Tray.qml
+TrayItem 1.0 TrayItem.qml
+WindowTitle 1.0 WindowTitle.qml
+Cpu 1.0 Cpu.qml
+Ram 1.0 Ram.qml
+Battery 1.0 Battery.qml
+Network 1.0 Network.qml
+Bluetooth 1.0 Bluetooth.qml
+Audio 1.0 Audio.qml
+Mpris 1.0 Mpris.qml
+PowerProfile 1.0 PowerProfile.qml
+Notifications 1.0 Notifications.qml
+Popover 1.0 Popover.qml

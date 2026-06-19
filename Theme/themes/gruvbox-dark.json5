@@ -1,0 +1,32 @@
+// Theme/themes/gruvbox-dark.json5
+// Gruvbox (dark variant) color palette adapted for a low-contrast
+// top/bottom bar surface. References:
+//   https://github.com/morhetz/gruvbox
+
+{
+  name: "gruvbox-dark",
+  colors: {
+    bg: "#ee282828",
+    bgAlt: "#22303030",
+    fg: "#ffebdbb2",
+    fgMuted: "#aaebdbb2",
+    accent: "#ffb8bb26",
+    urgent: "#fffb4934",
+    success: "#ffb8bb26",
+    warning: "#fffabd2f",
+    error: "#fffb4934"
+  },
+  fonts: {
+    family: "JetBrains Mono",
+    familyMono: "JetBrains Mono",
+    size: 12,
+    sizeSmall: 10,
+    sizeLarge: 14,
+    weight: 500,
+    weightBold: 700
+  },
+  space: { xs: 2, sm: 4, md: 8, lg: 12, xl: 20 },
+  radius: { sm: 4, md: 8, lg: 12, pill: 9999 },
+  animations: { enabled: true, duration: 150, durationFast: 75, durationSlow: 300 },
+  opacity: { disabled: 0.4, hover: 0.85, pressed: 0.7, bar: 0.95 }
+}
